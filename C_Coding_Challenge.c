@@ -22,6 +22,7 @@ scanf("%d", &studen4);
 
 printf("number this u want 1 2 3 or 4 ");
 scanf("%d", &x);
+
 switch (x)
 {
 case 1:
@@ -41,8 +42,12 @@ case 3:
     break;
 case 4:
     printf("\nscore1: %d\nscore2: %d\nscore3: %d\nscore4: %d\n",studen1,studen2,studen3,studen4);
-    score = studen1 / studen2 / studen3 /studen4;
+    if (studen2 == 0 || studen3 == 0 || studen4 == 0) {
+    printf("Error: Division by zero!\n");
+    } else {
+    score = studen1 / studen2 / studen3 / studen4;
     printf("Total score: %d\n", score );
+    }
     break;
 default:
     break;
